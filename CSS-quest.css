@@ -1,0 +1,172 @@
+html{
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+        
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: 80px auto;
+
+    grid-template-areas: 
+    "A A A"
+    "B D C";
+
+    background-image: url("Background/background-scroll.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    font-family: 'Montserrat', sans-serif;
+}
+.navigation{
+    grid-area: A;
+    display: grid;
+    grid-template-columns: auto 50vw auto;
+
+    grid-template-areas: "nav1 icons nav2";
+       
+}
+.nav1{
+    grid-area: nav1;
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
+}
+.nav2{
+    grid-area: nav2;
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
+}
+.right{
+    grid-area: B;
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0; 
+}
+.left{
+    grid-area: C;
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0; 
+}
+.main{
+    grid-area: D;
+    display: grid;
+    
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 100px 100px 150px 100px 150px 100px 150px 100px 150px 100px 150px 50px;
+
+    grid-template-areas: 
+    ". H ."
+    ". Q1 ."
+    ". A1 ."
+    ". Q2 ."
+    ". A2 ."
+    ". Q3 ."
+    ". A3 ."
+    ". Q4 ."
+    ". A4 ."
+    ". Q5 ."
+    ". A5 ."
+    ". . .";
+}
+.nadpis{
+    grid-area: H;
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 80px;
+
+    font-size: 28pt;
+    text-align: center;
+
+    margin: 10px;
+    margin-left: 20vw;
+    margin-right: 20vw;   
+}
+#Q1{
+    grid-area: Q1;
+}
+#Q2{
+    grid-area: Q2;
+}
+#Q3{
+    grid-area: Q3;
+}
+#Q4{
+    grid-area: Q4;
+}
+#Q5{
+    grid-area: Q5;
+}
+#A1{
+    grid-area: A1;
+    display: none;
+}
+#A2{
+    grid-area: A2;
+    display: none;
+}
+#A3{
+    grid-area: A3;
+    display: none;
+}
+#A4{
+    grid-area: A4;
+    display: none;
+}
+#A5{
+    grid-area: A5;
+    display: none;
+}
+.otazka, .odpoved{
+    position: relative;
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 80px;
+
+    font-size: 22pt;
+    
+    text-align: center;
+
+    vertical-align: middle;
+
+    margin: 10px ;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+.otazka{
+    cursor:pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}
+.otazka:hover{
+    transform: scale(1.1);
+    background-color: rgba(245,251,239,0.7);
+}
+.odpoved{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 100px;
+    transform: scale(1.8);
+    transition: transform 0.3s ease;
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(2.2);
+}
