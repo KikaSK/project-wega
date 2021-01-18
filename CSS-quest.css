@@ -88,13 +88,15 @@ body{
 }
 .nadpis{
     grid-area: H;
+    color: rgba(36,35,37,1);
     background-color: rgba(245,251,239,0.5);
     border: 2px solid rgba(36,35,37,0.8);
-    border-radius: 80px;
+    border-radius: 25px;
 
     font-size: 28pt;
     text-align: center;
-
+    
+    padding:10px;
     margin: 10px;
     margin-left: 20vw;
     margin-right: 20vw;   
@@ -138,7 +140,7 @@ body{
     position: relative;
     background-color: rgba(245,251,239,0.5);
     border: 2px solid rgba(36,35,37,0.8);
-    border-radius: 80px;
+    border-radius: 25px;
 
     font-size: 22pt;
     
@@ -146,6 +148,7 @@ body{
 
     vertical-align: middle;
 
+    padding: 15px;
     margin: 10px ;
     margin-left: 30vw;
     margin-right: 30vw;

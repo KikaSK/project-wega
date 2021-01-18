@@ -3,7 +3,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    
     height: 100%;
     display: grid;
     margin: 0;
@@ -93,22 +92,13 @@ body{
 .E{
     position: fixed;
     grid-area: E;
-    display: grid;
-    grid-template-rows: auto, auto, auto, auto, auto;
-
-    grid-template-areas:
-    "M"
-    "Z"
-    "Ž"
-    "Č"
-    "H";
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    margin-top:30px;
 }
 #M, #Z, #Ž, #Č, #H{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
     color: rgba(36,35,37,1);
     background-color: rgba(245,251,239,0.5);
     border: 2px solid rgba(36,35,37,0.8);

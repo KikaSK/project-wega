@@ -1,0 +1,26 @@
+body{
+    grid-template-columns: 5px auto 5px;
+    grid-template-rows: 40px auto;
+
+    background-image: url("Background/background-mobil-scroll.png");
+}
+.navigation{
+    grid-template-columns: 0 auto 0;
+}
+.icons{
+    justify-content: space-evenly;
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 50px;
+    transform: scale(0.9);
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(1.1);
+}
+.nadpis, .otazka, .odpoved{
+    font-size: 5vw;
+    margin-left: 0;
+    margin-right: 0;  
+    border-radius: 20px;
+}
+
