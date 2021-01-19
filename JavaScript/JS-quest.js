@@ -55,4 +55,12 @@ $(document).ready(function(){
             D5=false;
         }
     })
+    $(nadpis).mouseenter(function(){
+        $(nadpis).html("Po kliknutí na otázku sa zobrazí odpoveď");
+        $(nadpis).css("font-size","16pt");
+    });
+    $(nadpis).mouseleave(function(){
+        $(nadpis).html("Často kladené otázky");
+        $(nadpis).css("font-size","28pt");
+    });
 })

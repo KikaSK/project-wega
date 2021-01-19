@@ -13,7 +13,7 @@ body{
 
     grid-template-areas: 
     "A A A"
-    "B D C";
+    ". D .";
 
     background-image: url("Background/background-scroll.png");
     background-position: center;
@@ -26,22 +26,22 @@ body{
 .navigation{
     grid-area: A;
     display: grid;
+    position: sticky;
+    top:0;
     grid-template-columns: auto 50vw auto;
-
     grid-template-areas: "nav1 icons nav2";
-       
+    z-index: 1;
+}
+.navigation, .right, .left{ 
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
 }
 .nav1{
     grid-area: nav1;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
 }
 .nav2{
     grid-area: nav2;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
 }
 .icons{
     grid-area: icons;
@@ -49,28 +49,25 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
+}
+.right, .left{
+    position: fixed;
+    top:80px;
+    height: 100vh;
+    width:20px;
 }
 .right{
-    grid-area: B;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0; 
+    left:0px;
 }
 .left{
-    grid-area: C;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0; 
+    right:0px;
 }
 .main{
     grid-area: D;
     display: grid;
     
     grid-template-columns: 50px auto 50px;
-    grid-template-rows: 100px 100px 150px 100px 150px 100px 150px 100px 150px 100px 150px 50px;
+    grid-template-rows: 100px 100px 150px 100px 150px 100px 150px 100px 150px 100px 150px 100px auto 50px;
 
     grid-template-areas: 
     ". H ."
@@ -84,9 +81,11 @@ body{
     ". A4 ."
     ". Q5 ."
     ". A5 ."
+    ". hra ."
+    ". gal ."
     ". . .";
 }
-.nadpis{
+#nadpis{
     grid-area: H;
     color: rgba(36,35,37,1);
     background-color: rgba(245,251,239,0.5);
@@ -95,11 +94,12 @@ body{
 
     font-size: 28pt;
     text-align: center;
+    vertical-align: center;
     
-    padding:10px;
+    padding:14px;
     margin: 10px;
-    margin-left: 20vw;
-    margin-right: 20vw;   
+    margin-left: 30vw;
+    margin-right: 30vw;   
 }
 #Q1{
     grid-area: Q1;
@@ -136,25 +136,24 @@ body{
     grid-area: A5;
     display: none;
 }
-.otazka, .odpoved{
-    position: relative;
+.otazka, .odpoved, .hra{
     background-color: rgba(245,251,239,0.5);
     border: 2px solid rgba(36,35,37,0.8);
     border-radius: 25px;
 
-    font-size: 22pt;
+    font-size: 16pt;
     
     text-align: center;
-
     vertical-align: middle;
 
-    padding: 15px;
+    padding: 10px;
     margin: 10px ;
-    margin-left: 30vw;
-    margin-right: 30vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 .otazka{
     cursor:pointer;
+    padding: 25px;
     transition: transform 0.5s, background-color 0.5s;
 }
 .otazka:hover{
@@ -162,8 +161,23 @@ body{
     background-color: rgba(245,251,239,0.7);
 }
 .odpoved{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: justify;
+}
+#hra{
+    grid-area: hra;
+    padding-top: 10px;
+}
+#gallery{
+    grid-area: gal;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.g{
+    margin: 10px;
 }
 .img1, .img2, .img3, .img4{
     border-radius: 100px;

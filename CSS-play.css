@@ -26,22 +26,23 @@ body{
 .navigation{
     grid-area: A;
     display: grid;
+    position: sticky;
+    top:0;
     grid-template-columns: auto 50vw auto;
-
     grid-template-areas: "nav1 icons nav2";
+    z-index: 1;
        
+}
+.navigation, .right, .left{ 
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
 }
 .nav1{
     grid-area: nav1;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
 }
 .nav2{
     grid-area: nav2;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
 }
 .icons{
     grid-area: icons;
@@ -49,21 +50,18 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0;
+}
+.right, .left{
+    position: fixed;
+    top:80px;
+    height: 100vh;
+    width:20px;
 }
 .right{
-    grid-area: B;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0; 
+    left:0px;
 }
 .left{
-    grid-area: C;
-    background-color: rgba(36,35,37,0.7);
-    margin:0;
-    padding: 0; 
+    right:0px;
 }
 .img1, .img2, .img3, .img4{
     border-radius: 100px;
@@ -99,6 +97,7 @@ body{
     border: 3px solid rgba(36,35,37,0);
 }
 .bins{
+    height: 85vh;
     grid-area: Bin;
     display: flex;
     flex-flow: column nowrap;
@@ -114,7 +113,7 @@ body{
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 22px;
-    margin-bottom: 22px;
+    margin-bottom: 2vh;
 }
 .image{
     box-shadow: -10px 10px 10px #1f1f1f;

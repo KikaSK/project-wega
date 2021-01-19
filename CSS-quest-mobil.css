@@ -7,6 +7,14 @@ body{
 .navigation{
     grid-template-columns: 0 auto 0;
 }
+.right{
+    top:40px;
+    width:5px;
+}
+.left{
+    top:40px;
+    width:5px; 
+}
 .icons{
     justify-content: space-evenly;
 }
@@ -17,7 +25,7 @@ body{
 .img1:hover, .img2:hover, .img3:hover, .img4:hover{
     transform: scale(1.1);
 }
-.nadpis, .otazka, .odpoved{
+#nadpis, .otazka, .odpoved{
     font-size: 5vw;
     margin-left: 0;
     margin-right: 0;  

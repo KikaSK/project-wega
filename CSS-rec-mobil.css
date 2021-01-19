@@ -17,7 +17,6 @@ body{
 .img1:hover, .img2:hover, .img3:hover, .img4:hover{
     transform: scale(1.1);
 }
-
 .main{
     grid-template-columns: 65px auto 3px;
     grid-template-rows: 10px auto auto auto auto auto auto auto auto auto auto 10px;
@@ -34,6 +33,14 @@ body{
     "E N ."
     "E O ."
     ". . .";
+}
+.right{
+    top:40px;
+    width:5px;
+}
+.left{
+    top:40px;
+    width:5px; 
 }
 .list{
     font-size: 10pt;
